@@ -229,7 +229,7 @@ class Game {
     }
   }
   handleFuels(index){
-    car[index-1].overlaps(fuels,function (collector,collected){
+    cars[index-1].overlap(fuels,function (collector,collected){
       player.fuel=180;
       collected.remove()
     })
@@ -237,7 +237,7 @@ class Game {
   }
 
   handlePowerCoins(index) {
-    car[index-1].overlaps(powerCoins,function (collector,collected){
+    cars[index-1].overlap(powerCoins,function (collector,collected){
       player.score += 25;
      player.update();
 
